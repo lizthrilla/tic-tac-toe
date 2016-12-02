@@ -25,16 +25,24 @@ h1 {
 table {
   justify-content: center;
   align-content: center;
-  border: 2px solid black;
+
+  tr {
+    background-color: peachpuff;
+    height: 100px;
+
+    td {
+      width: 100px;
+    }
+  }
 }
 
-tr {
-  background-color: cadetblue;
-  height: 200px;
+h3 {
+  margin: 2em;
 }
 
-td {
-  width: 600px;
+button {
+  height: 50px;
+  width: 100px;
 }
 
 h6 {
