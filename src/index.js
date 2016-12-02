@@ -1,8 +1,17 @@
 if (process.env.NODE_ENV !== 'production') require('./index.html')
 import './styles/screen.scss'
 
+const cells = document.querySelectorAll('td')
+const playerTurn = document.querySelector('h3')
+
+// const button = document.querySelector('button')
+
 const main = () => {
-  document.querySelector('h1').textContent += '?'
+  for (let i = 0; i < cells.length; i++) {
+    cells[i].addEventListener('click', () => {
+      cells[i].textContent = 'X'
+    })
+  }
 }
 
 document.addEventListener('DOMContentLoaded', main)

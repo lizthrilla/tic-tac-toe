@@ -28,10 +28,14 @@ table {
 
   tr {
     background-color: peachpuff;
-    height: 100px;
 
     td {
+      height: 100px;
       width: 100px;
+      border-radius: 5px;
+      align-content: center;
+      text-align: center;
+      font-size: 30px;
     }
   }
 }
