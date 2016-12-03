@@ -19,8 +19,8 @@
 -   playerO marks an O in a cell
 -   playerX marks an X in a cell -->
 <!-- *   .textContent on h3 to signal if it's X or O -->
-*   read board every time to see if winner
-*   define winner
+<!-- *   read board every time to see if winner
+*   define winner -->
 *   if winner.className('.winner')
 *   create gameOver() when board reads winner
 
@@ -28,7 +28,7 @@
 ### Adventure Mode
 
 1.  sessionStorage or localStorage to persist the game's state between page reloads.
-2.  add a resent button
+2.  add a reset button
 3.  Animiate the X and Os
 
 ###Epic mode

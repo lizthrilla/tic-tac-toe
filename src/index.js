@@ -32,40 +32,16 @@ const main = () => {
   // instructions.textContent = 'Player X Goes'
 }
 const checkWin = () => {
-  if (qsa('td.p0[data-player=x]').length === 3) {
+  if (qsa('td.p0[data-player=x]').length === 3 || qsa('td.p1[data-player=x]').length === 3 || qsa('td.p2[data-player=x]').length === 3 || qsa('td.p3[data-player=x]').length === 3 || qsa('td.p4[data-player=x]').length === 3 || qsa('td.p5[data-player=x]').length === 3 || qsa('td.p6[data-player=x]').length === 3 || qsa('td.p7[data-player=x]').length === 3) {
     console.log('Player X wins')
-  } else if (qsa('td.p1[data-player=x]').length === 3) {
-    console.log('Player X wins')
-  } else if (qsa('td.p2[data-player=x]').length === 3) {
-    console.log('Player X wins')
-  } else if (qsa('td.p3[data-player=x]').length === 3) {
-    console.log('Player X wins')
-  } else if (qsa('td.p4[data-player=x]').length === 3) {
-    console.log('Player X wins')
-  } else if (qsa('td.p5[data-player=x]').length === 3) {
-    console.log('Player X wins')
-  } else if (qsa('td.p6[data-player=x]').length === 3) {
-    console.log('Player X wins')
-  } else if (qsa('td.p7[data-player=x]').length === 3) {
-    console.log('Player X wins')
-  } else if (qsa('td.p0[data-player=o]').length === 3) {
-    console.log('Player O wins')
-  } else if (qsa('td.p1[data-player=o]').length === 3) {
-    console.log('Player O wins')
-  } else if (qsa('td.p2[data-player=o]').length === 3) {
-    console.log('Player O wins')
-  } else if (qsa('td.p3[data-player=o]').length === 3) {
-    console.log('Player O wins')
-  } else if (qsa('td.p4[data-player=o]').length === 3) {
-    console.log('Player O wins')
-  } else if (qsa('td.p5[data-player=o]').length === 3) {
-    console.log('Player O wins')
-  } else if (qsa('td.p6[data-player=o]').length === 3) {
-    console.log('Player O wins')
-  } else if (qsa('td.p7[data-player=o]').length === 3) {
+  } else if (qsa('td.p0[data-player=o]').length === 3 || qsa('td.p1[data-player=o]').length === 3 || qsa('td.p2[data-player=o]').length === 3 || qsa('td.p3[data-player=o]').length === 3 || qsa('td.p4[data-player=o]').length === 3 || qsa('td.p5[data-player=o]').length === 3 || qsa('td.p6[data-player=o]').length === 3 || qsa('td.p7[data-player=o]').length === 3) {
     console.log('Player O wins')
   }
 }
+
+// const gameOver = () => {
+//   if (check
+// }
 
   // const gameOver () => {
   //   if (document.querySelector('.top') === x)
