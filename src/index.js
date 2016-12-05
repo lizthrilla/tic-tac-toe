@@ -13,22 +13,22 @@ const main = () => {
   for (var i = 0; i < cells.length; i++) {
     cells[i].textContent = ' '
   }
-  let player = 'x'
+  let player = 'X'
   for (let i = 0; i < cells.length; i++) {
     cells[i].addEventListener('click', () => {
       cells[i].textContent = player
-      if (player === 'x') {
-        player = 'o'
-        cells[i].dataset.player = 'x'
+      if (player === 'X') {
+        player = 'O'
+        cells[i].dataset.player = 'X'
         console.log(`${cells[i].dataset.player}`)
         checkWin()
       } else {
-        player = 'x'
-        cells[i].dataset.player = 'o'
+        player = 'X'
+        cells[i].dataset.player = 'O'
         console.log(`${cells[i].dataset.player}`)
         checkWin()
       }
-      instructions.textContent = `Player ${player} Goes`
+      instructions.textContent = `Player ${player.toUpperCase()} Goes`
     }
     )
   }
@@ -42,25 +42,26 @@ const main = () => {
   }
 
   const checkWin = () => {
-    if (qsa('td.p0[data-player=x]').length === 3 || qsa('td.p1[data-player=x]').length === 3 || qsa('td.p2[data-player=x]').length === 3 || qsa('td.p3[data-player=x]').length === 3 || qsa('td.p4[data-player=x]').length === 3 || qsa('td.p5[data-player=x]').length === 3 || qsa('td.p6[data-player=x]').length === 3 || qsa('td.p7[data-player=x]').length === 3) {
+    if (qsa('td.p0[data-player=X]').length === 3 || qsa('td.p1[data-player=X]').length === 3 || qsa('td.p2[data-player=X]').length === 3 || qsa('td.p3[data-player=X]').length === 3 || qsa('td.p4[data-player=X]').length === 3 || qsa('td.p5[data-player=X]').length === 3 || qsa('td.p6[data-player=X]').length === 3 || qsa('td.p7[data-player=X]').length === 3) {
       console.log('Player X wins')
       gameOver(true)
       // instructions.textContent = 'Player X Won'
-    } else if (qsa('td.p0[data-player=o]').length === 3 || qsa('td.p1[data-player=o]').length === 3 || qsa('td.p2[data-player=o]').length === 3 || qsa('td.p3[data-player=o]').length === 3 || qsa('td.p4[data-player=o]').length === 3 || qsa('td.p5[data-player=o]').length === 3 || qsa('td.p6[data-player=o]').length === 3 || qsa('td.p7[data-player=o]').length === 3) {
+    } else if (qsa('td.p0[data-player=O]').length === 3 || qsa('td.p1[data-player=O]').length === 3 || qsa('td.p2[data-player=O]').length === 3 || qsa('td.p3[data-player=O]').length === 3 || qsa('td.p4[data-player=O]').length === 3 || qsa('td.p5[data-player=O]').length === 3 || qsa('td.p6[data-player=O]').length === 3 || qsa('td.p7[data-player=O]').length === 3) {
       console.log('Player O wins')
       gameOver(false)
       // instructions.textContent = 'Player O Won'
     }
   }
-}
-const resetGame = () => {
-  qs('body').className = ' '
-  for (let i = 0; i < cells.length; i++) {
-    cells[i].textContent = ' '
+  const resetGame = () => {
+    qs('body').className = ''
+    for (let i = 0; i < cells.length; i++) {
+      cells[i].textContent = ''
+      cells[i].dataset.player = null
+    }
   }
+  button.addEventListener('click', resetGame)
 }
 document.addEventListener('DOMContentLoaded', main)
-button.addEventListener('click', resetGame)
 
 if (module.hot) {
   module.hot.dispose(() => window.location.reload())
