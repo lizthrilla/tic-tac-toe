@@ -52,21 +52,15 @@ const main = () => {
       // instructions.textContent = 'Player O Won'
     }
   }
-  // const resetGame = () => {
-  //   qs('body').className = ' '
-  //   // for (let i = 0; i < cells.length; i++) {
-  //     cells[i].textContent = ' '
-  //   }
-  // }
 }
-  // qsa('button').addEventListener('click', () => {
-  //   qs('body').className = ' '
-  //   for (let i = 0; i < cells.length; i++) {
-  //     cells[i].textContent = ' '
-  //     }
-  // }
-
+const resetGame = () => {
+  qs('body').className = ' '
+  for (let i = 0; i < cells.length; i++) {
+    cells[i].textContent = ' '
+  }
+}
 document.addEventListener('DOMContentLoaded', main)
+button.addEventListener('click', resetGame)
 
 if (module.hot) {
   module.hot.dispose(() => window.location.reload())
